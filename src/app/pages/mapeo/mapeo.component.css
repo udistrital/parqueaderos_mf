@@ -1,0 +1,115 @@
+.divider{
+    background-color: #8C1A18;
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-bottom: 5px;
+}
+
+.titulo{
+    color: #8C1A18;
+    padding: 10px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;   
+    font-family: Helvetica, sans-serif;
+}
+
+.contenido-gestion {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.contenido-gestion p {
+    color: #8C1A18;
+    font-size: 12px; 
+    margin: 0;
+    font-family: Helvetica, sans-serif;
+}
+
+.contenido-gestion .left {
+    text-align: left;
+    flex: 1;
+    margin-left: 20px;
+}
+
+.contenido-gestion .right {
+    text-align: left;
+    flex: 1;
+}
+.boton-ayuda{
+    align-items: center;
+    align-self: center;
+    margin-right: 35px;
+    position: relative;
+}
+
+.boton-accion{
+    margin-left: 0px;
+    padding-left: 20%;
+    padding-right: 20%;
+    font-weight: bold;
+    background-color: #8C1A18;
+}
+
+
+.tabla-gestion {
+    width: 100%;
+    border-collapse: collapse;
+    border-radius: 3px; 
+    font-family: Helvetica, Arial, sans-serif;
+    overflow: visible;  
+}
+
+.titulo-tabla th {
+    background-color: #8C1A18; 
+    padding: 10px;
+    text-align: center;
+    border: 1px solid #000; 
+    font-weight: bold;
+    font-family: Helvetica, sans-serif;
+    color: white
+}
+
+
+.tabla-gestion td {
+    padding: 10px;
+    text-align: center;
+    border: 1px solid #000; 
+    position: relative;
+    overflow: visible;
+}
+
+.contenido-celda {
+    font-family: Helvetica, sans-serif;
+}
+th.mat-sort-header-sorted {
+    color: black;
+}
+
+.icono-rojo{
+    color: #8C1A18;
+    font-weight: bold;
+    padding: 0;
+    min-width: auto;
+    width: auto;
+    height: auto;
+    cursor: pointer;
+    margin-right: 10%;
+}
+
+.tooltip-bottom {
+    z-index: 1000;
+}
+
+.boton-acciones{
+    position: relative;
+    display: inline-block;
+}
+
+.boton-acciones:hover .tooltip{
+    visibility: visible;
+    opacity: 1;
+}

@@ -1,0 +1,128 @@
+<mat-card>
+    <mat-card-content>
+        <mat-card>
+            
+            <mat-card-title class="titulo">{{ "MAPEO.TITULO" | translate }}</mat-card-title> 
+            <mat-divider class="divider"></mat-divider>
+            <mat-card-content>  
+                <mat-card>
+                    <div class="contenido-gestion">
+                        <p class="left">{{ "MAPEO.SUBTITULO_IZQ" | translate }}</p>
+                        <p class="right">{{ "MAPEO.SUBTITULO_DER" | translate }}</p>
+                    </div>                    
+                    <mat-divider class="divider"></mat-divider>
+                    <mat-card-content>  
+                        <form [formGroup]="gestionForm">
+                            <div class="grid">
+                                <div class="left-column">
+                                    <p class="nombre-input">{{ "FORMULARIO.NOMBRE_DEPENDENCIA" | translate }}
+                                        <button class="boton-ayuda">?   
+                                            <span class="tooltip tooltip-right">
+                                                <p>{{ "TOOLTIP.NOMBRE_DEPENDENCIA.PARTE_1" | translate }}</p>
+                                                <p>{{ "TOOLTIP.NOMBRE_DEPENDENCIA.PARTE_2" | translate }}</p>
+                                            </span>
+                                        </button> 
+                                    </p>
+                                    <input type="text" formControlName="nombre">
+                                    <p class="nombre-input">{{ "FORMULARIO.TIPO_DEPENDENCIA" | translate }}</p>
+                                    <select formControlName="tipoDependencia">
+                                        <option>...</option>
+                                        <option *ngFor="let item of tiposDependencia" [ngValue]="item">
+                                            {{item.nombre}}
+                                        </option>
+                                    </select>
+                                    <button class="boton-accion" (click)="buscarDependencias()">{{ "FORMULARIO.BUSCAR" | translate }}</button>
+                                </div>
+                                <div class="right-column">
+                                    <p class="nombre-input">{{ "FORMULARIO.FACULTAD" | translate }}
+                                        <button class="boton-ayuda">?   
+                                            <span class="tooltip tooltip-right">
+                                                <p>{{ "TOOLTIP.FACULTAD.PARTE_1" | translate }}</p>
+                                                <p>{{ "TOOLTIP.FACULTAD.PARTE_2" | translate }}</p>
+                                            </span>
+                                        </button> 
+                                    </p>
+                                    <select formControlName="facultad">
+                                        <option>...</option>
+                                        <option *ngFor="let item of facultades" [ngValue]="item">
+                                            {{item.nombre}}
+                                        </option>
+                                    </select>
+                                    
+                                    <p class="nombre-input">{{ "FORMULARIO.VICERRECTORIA" | translate }}
+                                        <button class="boton-ayuda">?   
+                                            <span class="tooltip tooltip-right">
+                                                <p>{{ "TOOLTIP.VICERRECTORIA.PARTE_1" | translate }}</p>
+                                                <p>{{ "TOOLTIP.VICERRECTORIA.PARTE_2" | translate }}</p>
+                                            </span>
+                                        </button> 
+                                    </p>
+                                    <select formControlName="vicerrectoria">
+                                        <option>...</option>
+                                        <option *ngFor="let item of vicerrectorias" [ngValue]="item">
+                                            {{item.nombre}}
+                                        </option>
+                                    </select>
+                                    <p class="nombre-input">{{ "FORMULARIO.ESTADO" | translate }}</p>
+                                    <select formControlName="estado">
+                                        <option>...</option>
+                                        <option>{{ "FORMULARIO.ESTADO_OPCIONES.ACTIVO" | translate }}</option>
+                                        <option>{{ "FORMULARIO.ESTADO_OPCIONES.NO_ACTIVO" | translate }}</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </form>
+
+                        <div *ngIf="cargando" class="loader">
+                            <mat-progress-spinner
+                                mode="indeterminate"
+                                color="primary">
+                            </mat-progress-spinner>
+                        </div>
+                        
+                        <ng-container *ngIf="mostrarTabla && !cargando">
+                            <table  mat-table [dataSource]="datos" class="mat-elevation-z8 tabla-gestion" aria-label="Tabla de mapeo" aria-describedby="descripcionTabla">
+                                <span id="descripcionTabla" class="visually-hidden">
+                                    Tabla de mapeo de dependencias.
+                                </span>
+                                <ng-container matColumnDef="NOMBRE">
+                                    <th mat-header-cell *matHeaderCellDef class="titulo-tabla" id="columna-nombre">{{ "TABLA.COLUMNAS.NOMBRE" | translate }}</th>
+                                    <td mat-cell *matCellDef="let element" class="contenido-celda"> {{element.nombre}}</td>
+                                </ng-container>
+                                <ng-container matColumnDef="DEPENDENCIA ASOCIADAS">
+                                    <th mat-header-cell *matHeaderCellDef class="titulo-tabla" id="columna-dependencias-asociadas">{{ "TABLA.COLUMNAS.DEPENDENCIAS_ASOCIADAS" | translate }}</th>
+                                    <td mat-cell *matCellDef="let element" class="contenido-celda"> {{ element.dependenciasAsociadas?.nombre ?? 'NO REGISTRA' }}</td>
+                                </ng-container>
+                                <ng-container matColumnDef="TIPO">
+                                    <th mat-header-cell *matHeaderCellDef class="titulo-tabla" id="columna-tipo">{{ "TABLA.COLUMNAS.TIPO" | translate }}</th>
+                                    <td mat-cell *matCellDef="let element" class="contenido-celda"> 
+                                        <ng-container *ngFor="let tipo of element.tipoDependencia">
+                                            {{tipo.nombre}},
+                                        </ng-container>
+                                    </td>
+                                </ng-container>
+                                <ng-container matColumnDef="ACCIONES">
+                                    <th mat-header-cell *matHeaderCellDef class="titulo-tabla" id="columna-acciones">{{ "TABLA.COLUMNAS.ACCIONES" | translate }}</th>
+                                    <td mat-cell *matCellDef="let element" class="contenido-celda"> 
+                                        <span >
+                                            <div class="boton-acciones">
+                                                <mat-icon class="icono-rojo" (click)="abrirDialogGenerarEditarMapeo('EDITAR', element)">{{ "ACCIONES.EDITAR" | translate }}<span class="tooltip tooltip-bottom">{{ "TOOLTIP.ACCIONES.EDITAR" | translate }}</span></mat-icon>
+                                            </div>
+                                            <div class="boton-acciones">
+                                                <mat-icon class="icono-rojo" (click)="abrirDialogGenerarEditarMapeo('GENERAR', element)">{{ "ACCIONES.ACEPTAR" | translate }}<span class="tooltip tooltip-bottom">{{ "TOOLTIP.ACCIONES.GENERAR" | translate }}</span></mat-icon>
+                                            </div>
+                                        </span>
+                                    </td>
+                                </ng-container>
+                                <tr mat-header-row class="titulo-tabla" *matHeaderRowDef="columnasBusqueda()"></tr>
+                                <tr mat-row *matRowDef="let row; columns: columnasBusqueda();"></tr>
+                            </table>                        
+                            <mat-paginator [pageSizeOptions]="[5, 10, 20]" showFirstLastButtons></mat-paginator>
+                        </ng-container>
+                    </mat-card-content>
+                    
+                </mat-card> 
+            </mat-card-content>
+        </mat-card>
+    </mat-card-content>
+</mat-card>
