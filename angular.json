@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "mapeo-dependencias-mf": {
+    "parqueadero-mf": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -35,7 +35,7 @@
             "scripts": [],
             "customWebpackConfig": {
               "path": "extra-webpack.config.js",
-              "libraryName": "mapeo-dependencias-mf",
+              "libraryName": "parqueadero-mf",
               "libraryTarget": "umd"
             }
           },
@@ -54,7 +54,7 @@
                   "with": "src/environments/environment.production.ts"
                 }
               ],
-              "deployUrl": "https://oikosmapeodependencias.portaloas.udistrital.edu.co/"
+              "deployUrl": "https://parqueadero.portaloas.udistrital.edu.co/"
             },
             "development": {
               "optimization": true,
@@ -70,7 +70,7 @@
                   "with": "src/environments/environment.development.ts"
                 }
               ],
-              "deployUrl": "https://pruebasoikosmapeodependencias.portaloas.udistrital.edu.co/"
+              "deployUrl": "https://pruebasparqueadero.portaloas.udistrital.edu.co/"
             },
             "local": {
               "buildOptimizer": false,
@@ -80,7 +80,7 @@
               "sourceMap": true,
               "namedChunks": true,
               "outputHashing": "none",
-              "deployUrl": "http://localhost:4203/"
+              "deployUrl": "http://localhost:4206/"
             }
           },
           "defaultConfiguration": "local"
@@ -89,13 +89,13 @@
           "builder": "@angular-builders/custom-webpack:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "mapeo-dependencias-mf:build:production"
+              "browserTarget": "parqueadero-mf:build:production"
             },
             "development": {
-              "browserTarget": "mapeo-dependencias-mf:build:development"
+              "browserTarget": "parqueadero-mf:build:development"
             },
             "local": {
-              "browserTarget": "mapeo-dependencias-mf:build:local"
+              "browserTarget": "parqueadero-mf:build:local"
             }
           },
           "defaultConfiguration": "local"
@@ -103,7 +103,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "mapeo-dependencias-mf:build"
+            "browserTarget": "parqueadero-mf:build"
           }
         },
         "test": {

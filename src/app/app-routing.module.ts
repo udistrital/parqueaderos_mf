@@ -6,14 +6,10 @@ import { AuthGuard } from 'src/_guards/auth.guard';
 
 const routes: Routes = [
   {
-    path: "mapeo",
+    path: "vehiculos",
     canActivate: [AuthGuard],
     component: MapeoComponent
   },
-  {
-    path: "**",
-    redirectTo: "registro"
-  }
 ];
 
 @NgModule({
