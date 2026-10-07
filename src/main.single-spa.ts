@@ -19,7 +19,7 @@ const lifecycles = singleSpaAngular({
     singleSpaPropsSubject.next(singleSpaProps);
     return platformBrowserDynamic(getSingleSpaExtraProviders()).bootstrapModule(AppModule);
   },
-  template: '<mapeo-dependencias-mf />',
+  template: '<parqueadero-mf />',
   Router,
   NavigationStart,
   NgZone,
