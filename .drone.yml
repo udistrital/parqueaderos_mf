@@ -17,6 +17,7 @@ steps:
       - feature/*
       - develop
       - hotfix/*
+      - release/*
       - master
     event:
     - push
