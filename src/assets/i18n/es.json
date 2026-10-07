@@ -1,0 +1,115 @@
+{
+    "MAPEO": {
+      "TITULO": "MAPEO DEPENDENCIAS",
+      "SUBTITULO_IZQ": "* El mapeo de la información se hará para académica / administrativa.",
+      "SUBTITULO_DER": "* Dependiendo del tipo de dependencia, se pedirá código SNIES."
+    },
+    "GENERAR_MAPEO":"MAPEO",
+    "TOOLTIP": {
+      "NOMBRE_DEPENDENCIA": {
+        "PARTE_1": "• El nombre de la dependencia debe ir en mayúsculas.",
+        "PARTE_2": "• Sin tildes."
+      },
+      "FACULTAD": {
+        "PARTE_1": "• El nombre de la Facultad debe ir en mayúsculas.",
+        "PARTE_2": "• Sin tildes."
+      },
+      "VICERRECTORIA": {
+        "PARTE_1": "• El nombre de la Vicerrectoría debe ir en mayúsculas.",
+        "PARTE_2": "• Sin tildes."
+      },
+      "NUMERO_IDENTIFICACION":{
+        "PARTE_1":"• Es un número interno único seleccionado bajo los criterios establecidos."
+      },
+      "SNIES":{
+        "PARTE_1":"• Es el número que el Ministerio de Educación le asigna a un programa académico de educación superior."
+      },
+      "IRIS":{
+        "PARTE_1":"• Id definido para el sistema de Iris."
+      },
+      "ARGO":{
+        "PARTE_1":"• Es la identificación identificación interna de Argo que se define para dicho sistema."
+      },
+      "ACCIONES":{
+        "EDITAR":"Editar Mapeo",
+        "GENERAR":"Genear Mapeo"
+      }
+    },
+    "FORMULARIO": {
+      "NOMBRE_DEPENDENCIA": "NOMBRE DEPENDENCIA",
+      "ARGO":"IDENTIFICACIÓN ARGO",
+      "NUMERO_IDENTIFICACION":"NÚMERO DE IDENTIFICACIÓN INTERNO",
+      "SNIES":"CÓDIGO SNIES",
+      "IRIS":"CÓDIGO IRIS",
+      "TIPO_DEPENDENCIA": "TIPO DEPENDENCIA",
+      "FACULTAD": "FACULTADES",
+      "VICERRECTORIA": "VICERRECTORÍA",
+      "ESTADO": "ESTADO",
+      "BUSCAR": "BUSCAR",
+      "ESTADO_OPCIONES": {
+        "ACTIVO": "ACTIVO",
+        "NO_ACTIVO": "NO ACTIVO"
+      }
+    },
+    "TABLA": {
+      "COLUMNAS": {
+        "NOMBRE": "NOMBRE",
+        "DEPENDENCIAS_ASOCIADAS": "DEPENDENCIAS ASOCIADAS",
+        "TIPO": "TIPO",
+        "ACCIONES": "ACCIONES"
+      }
+    },
+    "EXITO": {
+        "BUSQUEDA": "Datos cargados con éxito",
+        "GENERAR_MAPEO":"Mapeo creado",
+        "EDITAR_MAPEO":"Mapeo editado"
+    },
+    "ERROR":{
+        "BUSQUEDA":{
+            "DATOS":"Error al buscar dependencias: Datos no disponibles",
+            "BUSQUEDA":"Error al buscar dependencias: "
+        },
+        "DESCONOCIDO":"Error desconocido",
+        "GENERAR_MAPEO":"Error al crear mapeo",
+        "EDITAR_MAPEO":"Error al editar mapeo",
+        "ROL": "El usuario no cuenta con permisos",
+        "MAPEO_EXISTENTE": "Esta dependencia ya tiene asignado un mapeo",
+        "NO_MAPEO": "Esta dependencia no cuenta con mapeo por lo que no es editable"
+    },
+    "CARGA":{
+      "BUSQUEDA":"Obteniendo datos...",
+      "GENERAR_MAPEO":"Creando mapeo...",
+      "EDITAR_MAPEO":"Editando mapeo..."
+    },
+    "ACCIONES": {
+      "EDITAR": "edit",
+      "ACEPTAR": "check"
+    },
+    "CONFIRMACION":{
+      "EDITAR_MAPEO":{
+        "PREGUNTA":"¿Desea editar el mapeo de la dependencia?",
+        "CONFIRMAR":"EDITAR",
+        "DENEGAR":"NO EDITAR"
+      },
+      "GENERAR_MAPEO":{
+        "PREGUNTA":"¿Desea generar el mapeo de la dependencia?",
+        "CONFIRMAR":"MAPEAR",
+        "DENEGAR":"NO MAPEAR"
+      },
+      "CANCELAR":"CANCELAR",
+      "DENEGACION":"Los cambios no fueron guardados"
+    },
+    "POP_UP":{
+      "ICONO":{
+        "ERROR":"error",
+        "INFO":"info",
+        "EXITO":"success"
+      },
+      "TITULO":{
+        "EXITO":"Operación exitosa",
+        "ERROR":"Error"
+      },
+      "CONFIRMACION":"Aceptar"
+    }
+  }
+  
