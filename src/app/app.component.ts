@@ -4,12 +4,12 @@ import { fromEvent } from 'rxjs';
 import { getCookie } from './utils/cookie';
 
 @Component({
-  selector: 'parqueadero-mf',
+  selector: 'parqueaderos-mf',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'parqueadero-mf';
+  title = 'parqueaderos-mf';
 
   constructor(
     private translate: TranslateService,
