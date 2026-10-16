@@ -1,16 +1,16 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { GenerarEditarMapeoDialogComponent } from './editar-vehiculo-dialog.component';
+import { EditarVehiculoDialogComponent } from './editar-vehiculo-dialog.component';
 
-describe('GenerarEditarMapeoDialogComponent', () => {
-  let component: GenerarEditarMapeoDialogComponent;
-  let fixture: ComponentFixture<GenerarEditarMapeoDialogComponent>;
+describe('EditarVehiculoDialogComponent', () => {
+  let component: EditarVehiculoDialogComponent;
+  let fixture: ComponentFixture<EditarVehiculoDialogComponent>;
 
   beforeEach(() => {
     TestBed.configureTestingModule({
-      declarations: [GenerarEditarMapeoDialogComponent]
+      declarations: [EditarVehiculoDialogComponent]
     });
-    fixture = TestBed.createComponent(GenerarEditarMapeoDialogComponent);
+    fixture = TestBed.createComponent(EditarVehiculoDialogComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
