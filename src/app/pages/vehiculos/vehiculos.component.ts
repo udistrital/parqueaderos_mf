@@ -138,7 +138,7 @@ export class VehiculosComponent implements OnInit, AfterViewInit {
     this.mostrarTabla = false;
     this.vehiculos = [];
     return new Promise((resolve, reject) => {
-      this.tercerosService.get('info_complementaria_tercero/?query=InfoComplementariaId.GrupoInfoComplementariaId.CodigoAbreviacion:PARQUEADERO,Activo:' + busqueda.BusquedaEstado).subscribe((datosParqueadero: any) => {
+      this.tercerosService.get('info_complementaria_tercero/?query=InfoComplementariaId.GrupoInfoComplementariaId.CodigoAbreviacion:PARQUEADERO,Activo:' + busqueda.BusquedaEstado+'&limit=-1').subscribe((datosParqueadero: any) => {
         if (datosParqueadero) {
           for (let i = 0; i < datosParqueadero.length; i++) {
             this.vehiculo = {};
