@@ -1,0 +1,66 @@
+<mat-card>
+    <div class="contenido-editar">
+        <mat-card-title class="titulo"> {{tipo}} {{ "VEHICULO" | translate }}</mat-card-title>
+        <button class="boton-salir" (click)="onCloseClick()">x</button>
+    </div>
+    <mat-divider class="divider"></mat-divider>
+    <mat-card-content>
+        <form [formGroup]="VehiculoForm">
+            <div class="grid">
+                <div class="left-column">
+                    <p class="nombre-input">{{ "FORMULARIO.PLACA" | translate }}<button class="boton-ayuda">?
+                            <span class="tooltip tooltip-right">
+                                <p>{{ "TOOLTIP.PLACA.PARTE_1" | translate }}</p>
+                                <p>{{ "TOOLTIP.PLACA.PARTE_2" | translate }}</p>
+                            </span></button></p>
+                    <input type="text" [value]="element.placa" readonly class="input-centrado">
+                    <p class="nombre-input">{{ "FORMULARIO.PERSONA" | translate }}<button class="boton-ayuda">?
+                            <span class="tooltip tooltip-right">
+                                <p>{{ "TOOLTIP.PERSONA.PARTE_1" | translate }}</p>
+                            </span></button></p>
+                    <input type="text" [value]="element.persona" readonly>
+                    <p class="nombre-input">{{ "FORMULARIO.DOCUMENTO_IDENTIDAD" | translate }}</p>
+                    <input type="text" [value]="documentoIdentidad" readonly>
+                    <button class="boton-accion" (click)="verDocumento(element.documento)">{{ "FORMULARIO.DOCUMENTO" |
+                        translate }}</button>
+                </div>
+                <div class="right-column">
+                    <p class="nombre-input">{{ "FORMULARIO.TIPO_VEHICULO" | translate }}<button class="boton-ayuda">?
+                            <span class="tooltip tooltip-left">
+                                <p>{{ "TOOLTIP.TIPO_VEHICULO.PARTE_1" | translate }}</p>
+                            </span></button></p>
+                    <input type="text" [value]="element.tipoVehiculo" readonly>
+                    <p class="nombre-input">{{ "FORMULARIO.SEDES" | translate }}<button class="boton-ayuda">?
+                            <span class="tooltip tooltip-left">
+                                <p>{{ "TOOLTIP.SEDES.PARTE_1" | translate }}</p>
+                            </span></button></p>
+                    <input type="text" readonly [value]="element.sedes">
+                    <p class="nombre-input">{{ "FORMULARIO.ESTADO" | translate }}<button class="boton-ayuda">?
+                            <span class="tooltip tooltip-left">
+                                <p>{{ "TOOLTIP.ESTADO.PARTE_1" | translate }}</p>
+                            </span></button></p>
+                    <input type="text" readonly [value]="element.estado">
+                    <button class="boton-accion" (click)="verDocumento(element.soportes)">{{ "FORMULARIO.SOPORTES" |
+                        translate }}</button>
+                </div>
+
+            </div>
+            <br />
+            <mat-divider class="divider"></mat-divider>
+            <div *ngFor="let vinculacion of vinculaciones">
+                <mat-card>  
+                    <mat-card-title class="titulo">{{ vinculacion.TipoVinculacion}}</mat-card-title>
+                    <mat-card-content>
+                    <p>   {{ vinculacion.Dependencia }} </p>
+                    <p>   {{ vinculacion.FechaInicioVinculacion | date: 'dd/MM/yyyy' }} </p>
+                    <p>   {{ vinculacion.FechaFinVinculacion | date: 'dd/MM/yyyy' }} </p>
+                    </mat-card-content>
+                </mat-card>
+
+           
+            </div>
+            <mat-divider class="divider"></mat-divider>
+            <button class="boton-accion" (click)="gestorAccionTipo()">{{tipo}} {{ "VEHICULO" | translate }}</button>
+        </form>
+    </mat-card-content>
+</mat-card>

@@ -13,6 +13,7 @@ async function prePush() {
             console.log('En develop, no se necesita verificar build para este caso');
             return;
         }
+        
 
         console.log(`\nObteniendo actualización de develop...`);
         await git.fetch('origin', 'develop');
