@@ -5,7 +5,7 @@ import { RequestManager } from '../managers/requestManager';
     providedIn: 'root',
 })
 
-export class Dependencias_service {
+export class DependenciasService {
 
     constructor(private requestManager: RequestManager) {
         this.requestManager.setPath('DEPENDENCIAS_SERVICE');
