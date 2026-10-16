@@ -1,6 +1,6 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { GenerarEditarMapeoDialogComponent } from './generar-editar-mapeo-dialog.component';
+import { GenerarEditarMapeoDialogComponent } from './editar-vehiculo-dialog.component';
 
 describe('GenerarEditarMapeoDialogComponent', () => {
   let component: GenerarEditarMapeoDialogComponent;

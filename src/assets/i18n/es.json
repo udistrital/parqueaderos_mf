@@ -1,27 +1,23 @@
 {
-    "MAPEO": {
-      "TITULO": "MAPEO DEPENDENCIAS",
-      "SUBTITULO_IZQ": "* El mapeo de la información se hará para académica / administrativa.",
-      "SUBTITULO_DER": "* Dependiendo del tipo de dependencia, se pedirá código SNIES."
-    },
-    "GENERAR_MAPEO":"MAPEO",
+    "TITULO": "VHEÍCULOS",
+    
+    "VEHICULO":"VEHICULO",
     "TOOLTIP": {
-      "NOMBRE_DEPENDENCIA": {
-        "PARTE_1": "• El nombre de la dependencia debe ir en mayúsculas.",
+      "PLACA": {
+        "PARTE_1": "• Placa del vehículo, en mayúsculas.",
         "PARTE_2": "• Sin tildes."
       },
-      "FACULTAD": {
-        "PARTE_1": "• El nombre de la Facultad debe ir en mayúsculas.",
-        "PARTE_2": "• Sin tildes."
+      "PERSONA": {
+        "PARTE_1": "• El nombre persona asociada al vehículo."
       },
-      "VICERRECTORIA": {
+      "TIPO_VEHICULO": {
         "PARTE_1": "• El nombre de la Vicerrectoría debe ir en mayúsculas.",
         "PARTE_2": "• Sin tildes."
       },
-      "NUMERO_IDENTIFICACION":{
+      "SEDES":{
         "PARTE_1":"• Es un número interno único seleccionado bajo los criterios establecidos."
       },
-      "SNIES":{
+      "ESTADO":{
         "PARTE_1":"• Es el número que el Ministerio de Educación le asigna a un programa académico de educación superior."
       },
       "IRIS":{
@@ -31,21 +27,20 @@
         "PARTE_1":"• Es la identificación identificación interna de Argo que se define para dicho sistema."
       },
       "ACCIONES":{
-        "EDITAR":"Editar Mapeo",
-        "GENERAR":"Genear Mapeo"
+        "EDITAR":"Editar Vehículo",
+        "ACTIVAR":"Activar Vehículo"
       }
     },
     "FORMULARIO": {
-      "NOMBRE_DEPENDENCIA": "NOMBRE DEPENDENCIA",
-      "ARGO":"IDENTIFICACIÓN ARGO",
-      "NUMERO_IDENTIFICACION":"NÚMERO DE IDENTIFICACIÓN INTERNO",
-      "SNIES":"CÓDIGO SNIES",
-      "IRIS":"CÓDIGO IRIS",
-      "TIPO_DEPENDENCIA": "TIPO DEPENDENCIA",
-      "FACULTAD": "FACULTADES",
-      "VICERRECTORIA": "VICERRECTORÍA",
-      "ESTADO": "ESTADO",
+      "PLACA": "PLACA",
+      "PERSONA":"PERSONA",
+      "TIPO_VEHICULO":"TIPO DE VEHÍCULO",
+      "SEDES":"SEDES",
+      "ESTADO":"ESTADO",
       "BUSCAR": "BUSCAR",
+      "DOCUMENTO_IDENTIDAD": "DOCUMENTO DE IDENTIDAD",
+      "DOCUMENTO": "VER DOCUMENTO",
+      "SOPORTES": "VER SOPORTES",
       "ESTADO_OPCIONES": {
         "ACTIVO": "ACTIVO",
         "NO_ACTIVO": "NO ACTIVO"
@@ -53,16 +48,18 @@
     },
     "TABLA": {
       "COLUMNAS": {
-        "NOMBRE": "NOMBRE",
-        "DEPENDENCIAS_ASOCIADAS": "DEPENDENCIAS ASOCIADAS",
-        "TIPO": "TIPO",
+        "PLACA": "PLACA",
+        "PERSONA": "PERSONA",
+        "TIPOVEHICULO": "TIPO DE VEHÍCULO",
+        "SEDES": "SEDES",
+        "ESTADO": "ESTADO",
         "ACCIONES": "ACCIONES"
       }
     },
     "EXITO": {
         "BUSQUEDA": "Datos cargados con éxito",
-        "GENERAR_MAPEO":"Mapeo creado",
-        "EDITAR_MAPEO":"Mapeo editado"
+        "ACTIVAR_VEHICULO":"Vehículo activado",
+        "EDITAR_VEHICULO":"Vehículo editado"
     },
     "ERROR":{
         "BUSQUEDA":{
@@ -70,31 +67,30 @@
             "BUSQUEDA":"Error al buscar dependencias: "
         },
         "DESCONOCIDO":"Error desconocido",
-        "GENERAR_MAPEO":"Error al crear mapeo",
-        "EDITAR_MAPEO":"Error al editar mapeo",
-        "ROL": "El usuario no cuenta con permisos",
-        "MAPEO_EXISTENTE": "Esta dependencia ya tiene asignado un mapeo",
-        "NO_MAPEO": "Esta dependencia no cuenta con mapeo por lo que no es editable"
+        "ACTIVAR_VEHICULO":"Error al activar vehículo",
+        "EDITAR_VEHICULO":"Error al editar vehículo",
+        "ROL": "El usuario no cuenta con permisos"
+        
     },
     "CARGA":{
       "BUSQUEDA":"Obteniendo datos...",
-      "GENERAR_MAPEO":"Creando mapeo...",
-      "EDITAR_MAPEO":"Editando mapeo..."
+      "ACTIVAR_VEHICULO":"Activando vehículo...",
+      "EDITAR_VEHICULO":"Editando vehículo..."
     },
     "ACCIONES": {
       "EDITAR": "edit",
-      "ACEPTAR": "check"
+      "ACTIVAR": "check"
     },
     "CONFIRMACION":{
-      "EDITAR_MAPEO":{
-        "PREGUNTA":"¿Desea editar el mapeo de la dependencia?",
+      "EDITAR":{
+        "PREGUNTA":"¿Desea editar el vehículo?",
         "CONFIRMAR":"EDITAR",
         "DENEGAR":"NO EDITAR"
       },
-      "GENERAR_MAPEO":{
-        "PREGUNTA":"¿Desea generar el mapeo de la dependencia?",
-        "CONFIRMAR":"MAPEAR",
-        "DENEGAR":"NO MAPEAR"
+      "ACTIVAR":{
+        "PREGUNTA":"¿Desea activar/desactivar el vehículo?",
+        "CONFIRMAR":"ACTIVAR",
+        "DENEGAR":"DESACTIVAR"
       },
       "CANCELAR":"CANCELAR",
       "DENEGACION":"Los cambios no fueron guardados"

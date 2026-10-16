@@ -1,5 +1,5 @@
 {
-  "name": "mapeo-dependencias-mf",
+  "name": "parqueaderos-mf",
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
@@ -8,8 +8,8 @@
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
     "prepare": "husky",
-    "build:single-spa:mapeo-dependencias-mf": "ng build mapeo-dependencias-mf --configuration production",
-    "serve:single-spa:mapeo-dependencias-mf": "ng s --project mapeo-dependencias-mf --disable-host-check --port 4203 --live-reload false",
+    "build:single-spa:parqueaderos-mf": "ng build parqueaderos-mf --configuration production",
+    "serve:single-spa:parqueaderos-mf": "ng s --project parqueaderos-mf --disable-host-check --port 4203 --live-reload false",
     "build:prod": "ng build --progress --configuration=production",
     "build:test": "ng build --progress --configuration=development"
   },

@@ -4,12 +4,12 @@ import { fromEvent } from 'rxjs';
 import { getCookie } from './utils/cookie';
 
 @Component({
-  selector: 'mapeo-dependencias-mf',
+  selector: 'parqueaderos-mf',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'mapeo-dependencias-mf';
+  title = 'parqueaderos-mf';
 
   constructor(
     private translate: TranslateService,

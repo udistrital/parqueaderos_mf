@@ -1,7 +1,7 @@
 import { Component, Inject } from '@angular/core';
 import { MAT_DIALOG_DATA,MatDialogRef } from '@angular/material/dialog';
-import { MapeoBusqueda } from './../../../../models/mapeo-busqueda.models'
-import { OikosMidService } from './../../../../services/oikos_mid.service';
+import { MapeoBusqueda } from '../../../../models/vehiculo-busqueda.models'
+import { OikosMidService } from '../../../../services/oikos_mid.service';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { Dependencias_service } from 'src/app/services/dependencias.service';
 import { catchError, of, tap } from 'rxjs';

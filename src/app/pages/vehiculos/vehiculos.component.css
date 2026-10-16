@@ -113,3 +113,7 @@ th.mat-sort-header-sorted {
     visibility: visible;
     opacity: 1;
 }
+.mat-mdc-form-field {
+    font-size: 14px;
+    width: 100%;
+}

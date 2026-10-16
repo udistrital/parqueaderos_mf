@@ -4,7 +4,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
-import { MapeoComponent } from './pages/mapeo/mapeo.component';
+import { VehiculosComponent } from './pages/vehiculos/vehiculos.component';
 import { CommonModule } from '@angular/common';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { TranslateLoader, TranslateModule, TranslateService, TranslateStore } from '@ngx-translate/core';
@@ -12,6 +12,7 @@ import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 import { MatCardModule } from '@angular/material/card';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatDividerModule } from '@angular/material/divider';
+import { MatInputModule } from '@angular/material/input';
 import { MatTableModule } from '@angular/material/table';
 import { MatPaginatorModule } from '@angular/material/paginator';
 import { MatSortModule } from '@angular/material/sort';
@@ -21,7 +22,7 @@ import { MAT_DIALOG_DATA, MatDialogModule, MatDialogRef } from '@angular/materia
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 import { ReactiveFormsModule } from '@angular/forms'
 import { MatSelectModule } from '@angular/material/select';
-import { GenerarEditarMapeoDialogComponent } from './pages/mapeo/components/generar-editar-mapeo-dialog/generar-editar-mapeo-dialog.component';
+import { EditarVehiculoDialogComponent } from './pages/vehiculos/components/editar-vehiculo-dialog/editar-vehiculo-dialog.component';
 import { environment } from 'src/environments/environment';
 import { OikosService } from './services/oikos.service';
 import { OikosMidService } from './services/oikos_mid.service';
@@ -33,8 +34,8 @@ export function createTranslateLoader(http: HttpClient) {
 @NgModule({
   declarations: [
     AppComponent,
-    MapeoComponent,
-    GenerarEditarMapeoDialogComponent
+    VehiculosComponent,
+    EditarVehiculoDialogComponent
   ],
   imports: [
     BrowserModule,
@@ -54,6 +55,7 @@ export function createTranslateLoader(http: HttpClient) {
     MatIconModule,
     MatButtonModule,
     MatDialogModule,
+    MatInputModule,
     ReactiveFormsModule,
     MatProgressSpinnerModule,
     MatSelectModule,
