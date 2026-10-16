@@ -1,1 +1,2 @@
+nvm use v16.20.2
 node .husky/build_develop.js
